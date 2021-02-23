@@ -21,9 +21,13 @@ namespace ApiTest
 
             Pokemon poke = JsonConvert.DeserializeObject<Pokemon>(response.Content);
 
-            System.Console.WriteLine("Name: " + poke.name);
+            Console.Clear();
+
+            System.Console.WriteLine("Name: " + poke.name + " (id: " + poke.id + ")");
+            System.Console.WriteLine("Height: " + poke.height);
             System.Console.WriteLine("Weight: " + poke.weight);
             System.Console.WriteLine("Base EXP: " + poke.base_experience);
+            System.Console.WriteLine("Location Area: " + poke.location_area_encounters);
 
             Console.ReadLine();
         }
